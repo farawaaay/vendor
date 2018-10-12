@@ -1,0 +1,1189 @@
+
+*** Running vivado
+    with args -log top_module.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source top_module.tcl -notrace
+Command: synth_design -top top_module -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 264.719 ; gain = 92.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_module' [E:/vendor/vendor/vendor.srcs/sources_1/imports/new/top_module.v:3]
+INFO: [Synth 8-638] synthesizing module 'fsm' [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:42]
+WARNING: [Synth 8-567] referenced signal 'enable' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:238]
+INFO: [Synth 8-256] done synthesizing module 'fsm' (1#1) [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:3]
+INFO: [Synth 8-638] synthesizing module 'f_divider' [E:/vendor/vendor/vendor.srcs/sources_1/new/f_divider.v:3]
+	Parameter SECOND_N bound to: 100000000 - type: integer 
+	Parameter DISPLAY_N bound to: 50000 - type: integer 
+	Parameter MAIN_N bound to: 1000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'f_divider' (2#1) [E:/vendor/vendor/vendor.srcs/sources_1/new/f_divider.v:3]
+INFO: [Synth 8-638] synthesizing module 'display' [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:3]
+WARNING: [Synth 8-567] referenced signal 'en' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:28]
+WARNING: [Synth 8-567] referenced signal 'show_left' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:44]
+WARNING: [Synth 8-567] referenced signal 'float_left' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:44]
+WARNING: [Synth 8-567] referenced signal 'int_one_left' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:44]
+WARNING: [Synth 8-567] referenced signal 'int_ten_left' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:44]
+WARNING: [Synth 8-567] referenced signal 'en' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:44]
+INFO: [Synth 8-256] done synthesizing module 'display' (3#1) [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:3]
+WARNING: [Synth 8-567] referenced signal 'enable' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/imports/new/top_module.v:102]
+WARNING: [Synth 8-567] referenced signal 'enable' should be on the sensitivity list [E:/vendor/vendor/vendor.srcs/sources_1/imports/new/top_module.v:113]
+INFO: [Synth 8-256] done synthesizing module 'top_module' (4#1) [E:/vendor/vendor/vendor.srcs/sources_1/imports/new/top_module.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 298.910 ; gain = 126.633
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 298.910 ; gain = 126.633
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc]
+WARNING: [Vivado 12-507] No nets matched 'insert_coin_IBUF'. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'drink_1_IBUF'. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'drink_2_IBUF'. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'cancel_IBUF'. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'power_IBUF'. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 612.824 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 7 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 7 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 13 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 33 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 34 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 34 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 35 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 35 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 36 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 36 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 37 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 37 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 51 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 51 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 52 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 52 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 54 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 54 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 55 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 55 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 60 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 61 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 62 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 63 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 64 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 65 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 66 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 67 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 67 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 69 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 69 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 70 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 71 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 72 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 73 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 74 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 75 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 76 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 83 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 83 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 84 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 84 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 85 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 85 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 86 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 86 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 87 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 87 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "error" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "time_to_show_money" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "time_to_show_money" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "time_to_show_drink" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "time_to_show_drink" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "money_one" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "money_ten" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "error" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "time_to_show_money" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "time_to_show_money" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "time_to_show_drink" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "time_to_show_drink" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "money_one" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "money_ten" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hello" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "clk_second" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_display" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_main" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5544] ROM "SEG" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'enable_reg' [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:45]
+WARNING: [Synth 8-327] inferring latch for variable 'take_drink_reg' [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'show_left_reg' [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'hello_reg' [E:/vendor/vendor/vendor.srcs/sources_1/new/fsm.v:44]
+WARNING: [Synth 8-327] inferring latch for variable 'SEG_reg' [E:/vendor/vendor/vendor.srcs/sources_1/new/display.v:47]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 10    
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	  10 Input      8 Bit        Muxes := 3     
+	  11 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 6     
+	   7 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 11    
+	   2 Input      3 Bit        Muxes := 15    
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 28    
+	   3 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 5     
+	  11 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 9     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 15    
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 27    
+	   3 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 5     
+Module f_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 3     
++---Registers : 
+	               27 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
+Module display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	  10 Input      8 Bit        Muxes := 3     
+	  11 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 6     
+	   7 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clk_display" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_second" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_main" won't be mapped to RAM because address size (27) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 612.824 ; gain = 440.547
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[26] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[25] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[24] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[23] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[22] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[21] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[20] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[19] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[18] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[17] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[16] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[15] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[14] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[13] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[12] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[11] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[10] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[9] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[8] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[6] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[5] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[4] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[3] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[2] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[1] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/second_counter_reg[0] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\f_d/clk_second_reg ) is unused and will be removed from module top_module.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 612.824 ; gain = 440.547
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 7 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 7 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 13 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 33 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 34 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 34 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 35 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 35 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 36 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 36 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 37 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 37 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 51 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 51 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 52 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 52 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 54 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 54 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 55 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 55 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 60 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 61 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 62 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 63 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 64 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 65 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 66 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 67 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 67 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 69 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 69 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 70 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 71 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 72 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 73 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 74 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 75 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 76 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 83 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 83 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 84 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 84 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 85 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 85 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 86 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 86 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 87 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+incorrect set of required parameters for "set_property" at line 87 of file E:/vendor/vendor/vendor.srcs/constrs_1/new/main.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\d/scan_count_reg[3] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[7] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[6] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[5] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[4] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[3] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[2] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[1] ) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (\d/SEG_reg[0] ) is unused and will be removed from module top_module.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    14|
+|3     |LUT1   |    58|
+|4     |LUT2   |    29|
+|5     |LUT3   |    20|
+|6     |LUT4   |    29|
+|7     |LUT5   |    25|
+|8     |LUT6   |    98|
+|9     |MUXF7  |     1|
+|10    |FDRE   |    96|
+|11    |FDSE   |    10|
+|12    |LD     |     4|
+|13    |IBUF   |     7|
+|14    |OBUF   |    25|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+----------+------+
+|      |Instance |Module    |Cells |
++------+---------+----------+------+
+|1     |top      |          |   418|
+|2     |  d      |display   |    23|
+|3     |  f_d    |f_divider |   138|
+|4     |  fsm    |fsm       |   223|
++------+---------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 612.824 ; gain = 87.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 612.824 ; gain = 440.547
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 56 Warnings, 5 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 612.824 ; gain = 402.574
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 612.824 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 11 19:38:06 2018...

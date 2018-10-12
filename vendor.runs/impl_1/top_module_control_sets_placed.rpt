@@ -1,0 +1,65 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Thu Oct 11 19:38:33 2018
+| Host         : 803-042 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
+| Design       : top_module
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    12 |
+| Minimum Number of register sites lost to control set restrictions |    50 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              56 |           15 |
+| Yes          | No                    | No                     |              13 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              20 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+-----------------------------------+-----------------------------------+------------------+----------------+
+|       Clock Signal      |           Enable Signal           |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-------------------------+-----------------------------------+-----------------------------------+------------------+----------------+
+|  f_d/display_clk        |                                   |                                   |                3 |              3 |
+|  main_clk_BUFG          |                                   | fsm/time_to_show_error[3]_i_1_n_0 |                1 |              4 |
+|  main_clk_BUFG          | fsm/money_ten[3]_i_1_n_0          |                                   |                2 |              4 |
+|  main_clk_BUFG          | fsm/money_one[3]_i_2_n_0          | fsm/money_one[3]_i_1_n_0          |                3 |              4 |
+|  clk_IBUF_BUFG          |                                   |                                   |                2 |              4 |
+|  fsm/enable_reg_i_2_n_0 |                                   |                                   |                2 |              4 |
+|  main_clk_BUFG          | fsm/time_to_show_money[7]_i_2_n_0 | fsm/time_to_show_money[7]_i_1_n_0 |                5 |              8 |
+|  main_clk_BUFG          | fsm/time_to_show_drink[7]_i_2_n_0 | fsm/time_to_show_drink[7]_i_1_n_0 |                3 |              8 |
+|  main_clk_BUFG          | fsm/money_ten_back[3]_i_1_n_0     |                                   |                3 |              9 |
+|  main_clk_BUFG          |                                   |                                   |                6 |             10 |
+|  clk_IBUF_BUFG          |                                   | f_d/main_counter[26]_i_1_n_0      |                7 |             26 |
+|  clk_IBUF_BUFG          |                                   | f_d/display_counter[26]_i_1_n_0   |                7 |             26 |
++-------------------------+-----------------------------------+-----------------------------------+------------------+----------------+
+
+

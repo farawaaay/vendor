@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vendor/vendor.srcs/sources_1/new/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vendor/vendor.srcs/sim_1/new/fsm_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fsm_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vendor/vendor.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
