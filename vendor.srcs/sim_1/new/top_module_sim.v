@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-
 module top_module_sim();
     reg clk = 0;
     reg coin_type = 0;

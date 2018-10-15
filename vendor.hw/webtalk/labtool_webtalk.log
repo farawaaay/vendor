@@ -4,6 +4,6 @@
   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source E:/vendor_10_11/vendor/vendor.hw/webtalk/labtool_webtalk.tcl -notrace
-INFO: [Common 17-186] 'E:/vendor_10_11/vendor/vendor.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Thu Oct 11 18:45:29 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Oct 11 18:45:29 2018...
+source E:/vendor/vendor/vendor.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/vendor/vendor/vendor.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Mon Oct 15 08:07:04 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 15 08:07:04 2018...

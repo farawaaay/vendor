@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-
 module f_divider(
     input en,
     input clk,
@@ -7,12 +6,13 @@ module f_divider(
     output reg clk_second = 0,
     output reg clk_main = 0
     );
-//    parameter SECOND_N  = 100;
-    parameter SECOND_N  = 100_000_000;
-//    parameter DISPLAY_N =   1;
-    parameter DISPLAY_N =      50_000;
-//    parameter MAIN_N    =   1;
-    parameter MAIN_N    =   1_000_000;
+    `ifdef XILINX_SIMULATOR parameter SECOND_N  = 100; `endif
+    `ifdef XILINX_SIMULATOR parameter DISPLAY_N =   1; `endif
+    `ifdef XILINX_SIMULATOR parameter MAIN_N    =   1; `endif
+    
+    `ifndef XILINX_SIMULATOR parameter SECOND_N  = 100_000_000; `endif
+    `ifndef XILINX_SIMULATOR parameter DISPLAY_N =      50_000; `endif
+    `ifndef XILINX_SIMULATOR parameter MAIN_N    =   1_000_000; `endif
     
     reg [26:0] second_counter = 0;
     reg [26:0] display_counter = 0;

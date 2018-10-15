@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Thu Oct 11 19:38:33 2018
-| Host         : 803-042 running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon Oct 15 09:12:02 2018
+| Host         : 803-060 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
 | Design       : top_module
 | Device       : xc7a100t

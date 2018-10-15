@@ -2,9 +2,9 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu Oct 11 09:28:24 2018
-# Process ID: 6844
-# Log file: D:/vendor/vendor.sim/sim_1/behav/webtalk.log
-# Journal file: D:/vendor/vendor.sim/sim_1/behav\webtalk.jou
+# Start of session at: Mon Oct 15 09:10:31 2018
+# Process ID: 5960
+# Log file: E:/vendor/vendor/vendor.sim/sim_1/behav/webtalk.log
+# Journal file: E:/vendor/vendor/vendor.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source D:/vendor/vendor.sim/sim_1/behav/xsim.dir/top_module_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+source E:/vendor/vendor/vendor.sim/sim_1/behav/xsim.dir/top_module_sim_behav/webtalk/xsim_webtalk.tcl -notrace
